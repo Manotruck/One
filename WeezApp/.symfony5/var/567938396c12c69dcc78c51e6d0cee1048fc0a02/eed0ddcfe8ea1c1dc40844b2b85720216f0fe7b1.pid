@@ -1,0 +1,15 @@
+{
+    "dir": "C:\\Users\\picac\\Desktop\\mon appli\\webeez",
+    "watch": null,
+    "pid": 6232,
+    "port": 0,
+    "scheme": "",
+    "args": [
+        "C:\\xampp\\php\\php-cgi.exe",
+        "-b",
+        "63500",
+        "-d",
+        "error_log=C:\\Users\\picac\\.symfony5\\log\\567938396c12c69dcc78c51e6d0cee1048fc0a02.log"
+    ],
+    "name": "PHP-CGI"
+}

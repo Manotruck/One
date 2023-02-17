@@ -1,0 +1,15 @@
+{
+    "dir": "C:\\Users\\picac\\OneDrive\\Documents\\GitHub\\E-space\\E-space",
+    "watch": null,
+    "pid": 15240,
+    "port": 0,
+    "scheme": "",
+    "args": [
+        "C:\\Users\\picac\\Downloads\\php_8-1-3_fr_63296_64\\php-cgi.exe",
+        "-b",
+        "62742",
+        "-d",
+        "error_log=C:\\Users\\picac\\.symfony5\\log\\0af85b9bf0d19ec51a934e0d5b1ad2e5eb66aa63.log"
+    ],
+    "name": "PHP-CGI"
+}

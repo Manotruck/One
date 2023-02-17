@@ -1,0 +1,14 @@
+[
+    {
+        "version": "8.1.3",
+        "path": "C:\\Users\\picac\\Downloads\\php_8-1-3_fr_63296_64",
+        "php_path": "C:\\Users\\picac\\Downloads\\php_8-1-3_fr_63296_64\\php.exe",
+        "fpm_path": "",
+        "cgi_path": "C:\\Users\\picac\\Downloads\\php_8-1-3_fr_63296_64\\php-cgi.exe",
+        "php_config_path": "",
+        "phpize_path": "",
+        "phpdbg_path": "C:\\Users\\picac\\Downloads\\php_8-1-3_fr_63296_64\\phpdbg.exe",
+        "is_system": true,
+        "frankenphp": false
+    }
+]

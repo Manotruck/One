@@ -1,0 +1,15 @@
+{
+    "dir": "C:\\Users\\picac\\Web_Board",
+    "watch": null,
+    "pid": 15388,
+    "port": 0,
+    "scheme": "",
+    "args": [
+        "C:\\Users\\picac\\Downloads\\php_8-1-3_fr_63296_64\\php-cgi.exe",
+        "-b",
+        "54984",
+        "-d",
+        "error_log=C:\\Users\\picac\\.symfony5\\log\\5c7ae74da986d46778243d70ff650aa23643b4e5.log"
+    ],
+    "name": "PHP-CGI"
+}
