@@ -13,12 +13,12 @@ class InscriptionType extends AbstractType
     {
         $builder
             ->add('nom')
-            ->prenom('prenom')
-            ->email('email')
-            ->pseudo('pseudo')
-            ->password('password')
-            ->codepostal('codepostal')
-            ->pays('pays')
+            ->add('prenom')
+            ->add('email')
+            ->add('pseudo')
+            ->add('password')
+            ->add('codepostal')
+            ->add('pays')
         ;
     }
 

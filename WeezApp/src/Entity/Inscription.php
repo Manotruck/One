@@ -13,6 +13,7 @@ class Inscription
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     * @ORM\PrimaryKey
      */
     private $id;
     /**
@@ -66,16 +67,6 @@ class Inscription
         $this->prenom = $prenom;
         return $this;
     }
-    
-    public function getPseudo(): ?string
-    {
-        return $this->pseudo;
-    }
-    public function setPseudo(string $pseudo): self
-    {
-        $this->pseudo = $pseudo;
-        return $this;
-    }
     public function getEmail(): ?string
     {
         return $this->email;
@@ -83,6 +74,15 @@ class Inscription
     public function setEmail(string $email): self
     {
         $this->email = $email;
+        return $this;
+    }
+    public function getPseudo(): ?string
+    {
+        return $this->pseudo;
+    }
+    public function setPseudo(string $pseudo): self
+    {
+        $this->pseudo = $pseudo;
         return $this;
     }
     public function getPassword(): ?string
