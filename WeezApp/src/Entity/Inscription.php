@@ -13,7 +13,7 @@ class Inscription
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
-     * @ORM\PrimaryKey
+     
      */
     private $id;
     /**

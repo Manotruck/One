@@ -1,0 +1,398 @@
+
+    <style>
+        .container {
+            
+            display: grid;
+            grid-template-columns: 10% 70% 20%;
+            grid-template-rows: 13vh 90vh 7vh ;
+            border-radius: 5px;
+        }
+
+        .header {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            
+            
+            display: flex;
+            width: ;
+            justify-content: ;
+            justify-items: ;
+            align-content: space-between;
+               
+        }
+    
+        .logo {  
+             grid-column-start: 1;
+             grid-column-end: 2;
+             grid-row-start: 1;
+             grid-row-end: 2;
+             font-size: 23px;
+             justify-content: center;
+             color:red;
+             width: 10%;
+             border: 2.5px solid rgb(27, 202, 27);
+             border-radius: 5px;
+             font-size: bold;
+             background-color: rgb(233, 245, 236);
+        }
+        
+        .actu {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            width: 70%;
+            border: 2.5px solid rgb(27, 202, 27);
+            color: black;
+            font-size: 11px;
+            border-radius: 5px;
+            background-color: rgb(56, 83, 102);
+        }
+        
+        #post {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            display: flex;
+            flex-direction: column;
+            align-content: space-between;
+            
+            border: 2.5px solid rgb(27, 202, 27);
+            padding: auto;
+            text-align: center;
+            font-size: 15px;
+            border-radius: 5px;
+            background-color: rgb(56, 83, 102); 
+        }
+        
+        #main {
+            display: block;
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            border: 2.5px solid rgb(27, 202, 27);
+            border-radius: 5px;
+            color: rgb(202, 91, 27);
+            text-decoration: underline red;
+            font-size: 15px;
+            text-align: center;
+            background-color: rgb(158, 157, 157);
+        }
+        
+        .aside {
+            display: block;
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            padding: 5px;
+            border: 2.5px solid rgb(27, 202, 27);
+            border-radius: 5px;
+            background-color: rgb(56, 83, 102);
+            text-align: center;
+            overflow-y: scroll;
+        }
+        
+       
+        
+        a:hover {
+            background-color: aqua;
+        }
+        
+        .menuv {
+            max-height: 25px;
+            margin-bottom: 25px;
+            margin-top: 25px;
+            text-align: center;
+            font-size: 15px;
+            border: 2.5px solid red;
+            border-radius: 5px;
+            background-color: aliceblue;
+        }
+       
+        #tpost {
+            text-decoration: underline red;
+            text-align: center; 
+        }
+        .ipub a {
+            display: inline-block;
+            border: 2.5px solid red;
+            background-color: aliceblue;
+            margin: 5px;
+        }
+        .choixactu  { 
+            max-height: 25px;
+            margin-top: 25px;
+            max-width: 100px;
+            text-align: center;
+           
+            justify-content: center;
+            margin: 15px;
+            font-size: 15px;
+            border: 2.5px solid red;
+            border-radius: 5px;
+            background-color: aliceblue;
+        }
+        
+        #choixactu  {
+            display: none;
+            box-shadow: 2px 2px 2px #ccc;
+            position: absolute;
+            background-color: rgb(215, 225, 233);
+            text-align: left;
+            font-size: 11px;
+            z-index: 1000;
+         
+        }
+        .actu > .choixactu:hover #choixactu {
+            display:block;
+        }
+        .choixpub  {
+            
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            width: 20%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-content: space-between;
+            border: 2.5px solid rgb(27, 202, 27);
+            background-color: rgb(56, 83, 102);
+        }
+        
+        .visibilites {
+            max-height: 25px;
+            margin-top: 25px;
+            text-align: center;
+            margin: 15px;
+            font-size: 15px;
+            border: 2.5px solid red;
+            border-radius: 5px;
+            background-color: aliceblue;
+        }
+        
+        .preferences{
+            max-height: 25px;
+            margin-top: 25px;
+            text-align: center;
+            margin: 15px;
+            font-size: 15px;
+            border: 2.5px solid red;
+            border-radius: 5px;
+            background-color: aliceblue;
+        }
+        
+        #preferences {
+            display: none;
+            box-shadow: 2px 2px 2px #ccc;
+            position: absolute;
+            background-color: rgb(215, 225, 233);
+            text-align: left;
+            font-size: 11px;
+            z-index: 1000; 
+        }
+        
+        #visibilites {
+            display: none;
+            box-shadow: 2px 2px 2px #ccc;
+            position: absolute;
+            background-color: rgb(215, 225, 233);
+            text-align: left;
+            font-size: 11px;
+            z-index: 1000;  
+        }
+        
+        .choixpub > .visibilites:hover #visibilites {
+            display: block;
+        }
+        
+        .choixpub > .preferences:hover #preferences {
+            display: block;
+        }
+        
+        select {
+            max-height: 22px;
+        }
+        
+        .espace {
+            text-align: center;
+            max-width: 100px;
+        }
+        
+        .filactu {
+            display:block;
+            justify-items: center;
+            justify-content: center;
+            max-width: 75%;
+            margin-left: 12.5%;
+            max-height: 80vh;
+            overflow-y: scroll;
+            scrollbar-width: 2px;
+            scrollbar-color: red;
+            background-color: rgb(143, 92, 92);      
+        }  
+        .filactu img {
+            width: 100%;
+            max-width: 500px;
+            
+
+        }
+        .aside img {
+            width: 100%;
+            max-width: 200px;
+        } 
+        .footer {
+             display: grid;
+             grid-column-start: 1;
+             grid-column-end: 4;
+             grid-row-start: 3;
+             grid-row-end: 4;
+             background-color: rgb(56, 83, 102);
+             border: 2px solid greenyellow;
+             border-radius: 5px;
+        }   
+        
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+        <div class="header logo">
+            E-SPACE
+            
+        </div>
+        <div class="actu"> 
+           
+                  <input type="search" placeholder="Rechercher"> 
+                  <div class=choixactu>
+                    <a>Choix actu</a>
+                      <form action="choixactu" method="post" id="choixactu">
+                        <label for="actulocal">Locale</label>
+                        <input type="checkbox" id="actulocal">
+                        <label for="actunational">Nationale</label>
+                        <input type="checkbox" id="actunational">
+                        <label for="ami">Amis</label>
+                        <input type="checkbox" id="ami">
+                        <label for="choixactugroupe">Choisissez un ou plusieurs groupes</label>
+                        <select id="choixgroupeactu" name="choixgroupeactu" multiple>
+                          <option value="default">Choix groupes</option>
+                          <option>Groupe1</option>
+                          <option>Groupe2</option>
+                          <option>Groupe3.</option>
+                          <option>Groupe4</option>
+                          <option>Groupe5</option>
+                        </select>
+                        <input type="submit" value="Valider">
+
+                  </form>
+                </div>
+            </div>    
+        <div class="choixpub">
+                <div class="visibilites">
+                      <a>Visibilités</a>
+                           <form action="visibilites" method="post" id="visibilites">
+                             <input type="checkbox" id="local">
+                             <label for="publocal">Locale</label><br>
+                             <input type="checkbox" id="local">
+                             <label for="pubregional">Régionale</label><br>
+                             <input type="checkbox" id="local">
+                             <label for="pubnational">Nationale</label><br>
+                             <input type="checkbox" id="local">
+                             <label for="pubinternational">internationale</label><br>
+                             <input type="submit" value="valider">
+                           </form>
+                        </div>
+                <div class="preferences">
+                       <a>Préférences</a> 
+                           <form action="preferences" method="post" id="preferences">
+                             
+                             <input type="checkbox" id="actuIndépendante">
+                             <label for="pubAI">Actu</label><br>
+                             <input type="checkbox" id="environnement">
+                             <label for="pubioe">Environnement</label><br>
+                             <input type="checkbox" id="sports">
+                             <label for="pubsports">Sport</label><br>
+                             <input type="checkbox" id="loisirs créatifs">
+                             <label for="pubnational">Loisirs créatifs</label><br>
+                             <input type="checkbox" id="bricolage">
+                             <label for="pubbricolage">Bricolage</label><br>
+                             <input type="submit" value="valider">
+                           </form> 
+                        </div>
+            
+        </div>
+                   
+    </div>
+    
+    <div class="post" id="post">
+      <div class="menuv">
+        <a link href={{path('app_inscription')}}>Inscription</a>
+      </div>
+      <div class="menuv">
+        <a link href="{{path('app_votre_espace')}}">Votre espace</a>
+      </div>
+      <div class="menuv">
+        <a link href="{{path('app_amis')}}">AMIS</a>
+      </div>
+      <div class="menuv">
+        <a href="{{path('app_groupes')}}">GROUPES</a>
+      </div>
+          
+          
+    </div>
+   
+    <div class="main" id="main">
+            FIL D'ACTU
+            <div class="filactu">
+              
+                <video width="500" height="300" controls>
+                    <source src="C:\Users\picac\Desktop\Photos\2020\20200613_161352.mp4" type=video/mp4>
+                 </video>
+                <video width="500" height="300" controls>
+                    <source src="C:\Users\picac\Desktop\Photos\20202021\20201231_120830.mp4" type=video/mp4>
+                 </video>
+                <video width="500" height="300" controls>
+                    <source src="C:\Users\picac\Desktop\Photos\2020\20200613_160743.mp4" type="video/mp4">
+                </video>
+                <img src="C:\Users\picac\Desktop\Photos globalaxe\Microalgue naturelle.jpg">
+                <img src="C:\Users\picac\Desktop\Photos globalaxe\totle logo.jpg">
+                <img src="C:\Users\picac\Desktop\Photos globalaxe\th.jpg">
+                <img src="C:\Users\picac\Desktop\Photos globalaxe\Raceways.jpg">
+                <img src="C:\Users\picac\Desktop\Photos globalaxe\us-waehrung-us-dollar.jpg">
+                <img src="C:\Users\picac\Desktop\Photos globalaxe\Photobioréacteur Tube.jpg">
+            
+            </div>
+         </div> 
+    <div class="aside" id="aside">    
+            
+           
+              
+            <div class="ipub"> 
+                <a href="formulairepub.html">Votre pub ici</a>
+                <br>
+                
+            </div>
+            
+            <img src="C:\Users\picac\Desktop\Photos globalaxe\fakir-shop-logo-1455614675.jpg">
+            <img src="C:\Users\picac\Downloads\Photos globalaxe\mediapart.jpg">
+            <img src="C:\Users\picac\Downloads\Photos globalaxe\osons causer.jpg">
+            <img src="C:\Users\picac\Downloads\Photos globalaxe\fil d'actu logo.jpg">
+            <img src="C:\Users\picac\Desktop\Photos globalaxe\brut.jpg">
+            <img src="C:\Users\picac\Desktop\Photos globalaxe\rt.jpg">
+            <img src="C:\Users\picac\Desktop\Photos globalaxe\weblogo-groasis.png">
+            <img src="C:\Users\picac\Desktop\Photos globalaxe\WWF.jpeg">
+            <img src="C:\Users\picac\Desktop\Photos globalaxe\conederation paysanne.jpg">
+
+
+    </div>
+
+  
+</body>
+
+
