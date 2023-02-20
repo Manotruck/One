@@ -1,4 +1,50 @@
+<style>
+    .form  {
+        display: grid;
+        min-width: 200px;
+        max-width: 200px;
+        border: 2.5px solid red;
+        background-color: rgb(238, 241, 240);
+        text-align: center;
+        padding: 10px 20px 10px 20px;
+    }
+     h1  {
+            color:blue;
+            text-decoration: underline;   
+        }
+    label  {
+       color: red;
+    }
+    button  {
+        background: bisque;
+    }
+</style>   
 
-        {% block body %}
-            {{ form(form) }}
-        {% endblock %}
+{{ form_start(form, {'method': 'post'}) }}
+    <h1>Formulaire d'inscription</h1>
+    <div class="form">
+        {{ form_label(form.nom) }}
+        {{ form_widget(form.nom) }}
+        <br>
+        {{ form_label(form.prenom) }}
+        {{ form_widget(form.prenom) }}
+        <br>
+        {{ form_label(form.email) }}
+        {{ form_widget(form.email) }}
+        <br>
+        {{ form_label(form.pseudo) }}
+        {{ form_widget(form.pseudo) }}
+        <br>
+        {{ form_label(form.password) }}
+        {{ form_widget(form.password) }}
+        <br>
+        {{ form_label(form.codepostal) }}
+        {{ form_widget(form.codepostal) }}
+        <br>
+        {{ form_label(form.pays) }}
+        {{ form_widget(form.pays) }}
+        <br>
+        {{ form_rest(form) }}
+        <button type="submit">Enregistrer</button>
+    </div>
+{{ form_end(form)}}
