@@ -1,16 +1,28 @@
 <style>
+    .container {
+        background-image : url(https://images.pexels.com/photos/7736104/pexels-photo-7736104.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+        background-size : 100% 100%;
+        width: 100%;
+        min-height: 100%;
+    }
     .form  {
         display: grid;
-        min-width: 200px;
-        max-width: 200px;
+        min-width: 250px;
+        max-width: 250px;
+        margin: auto;
         border: 2.5px solid red;
-        background-color: rgb(238, 241, 240);
+        background-color: rgb(211, 94, 235);
         text-align: center;
+        
         padding: 10px 20px 10px 20px;
     }
-     h1  {
-            color:blue;
-            text-decoration: underline;   
+    .titre  {
+            display: grid;
+            margin: auto;
+            text-align: center;
+            color: red; 
+            font-size: 30px; 
+             
         }
     label  {
        color: red;
@@ -19,32 +31,41 @@
         background: bisque;
     }
 </style>   
-
-{{ form_start(form, {'method': 'post'}) }}
-    <h1>Formulaire d'inscription</h1>
-    <div class="form">
-        {{ form_label(form.nom) }}
-        {{ form_widget(form.nom) }}
-        <br>
-        {{ form_label(form.prenom) }}
-        {{ form_widget(form.prenom) }}
-        <br>
-        {{ form_label(form.email) }}
-        {{ form_widget(form.email) }}
-        <br>
-        {{ form_label(form.pseudo) }}
-        {{ form_widget(form.pseudo) }}
-        <br>
-        {{ form_label(form.password) }}
-        {{ form_widget(form.password) }}
-        <br>
-        {{ form_label(form.codepostal) }}
-        {{ form_widget(form.codepostal) }}
-        <br>
-        {{ form_label(form.pays) }}
-        {{ form_widget(form.pays) }}
-        <br>
-        {{ form_rest(form) }}
-        <button type="submit">Enregistrer</button>
+<div class="container">
+ {{ form_start(inscription_form) }}
+    <br>
+    <div class="titre">
+    Formulaire d'inscription
     </div>
-{{ form_end(form)}}
+    <br>
+    <br>
+    <div class="form">
+   
+        {{ form_label(inscription_form.nom) }}
+        {{ form_widget(inscription_form.nom) }}
+        <br>
+        {{ form_label(inscription_form.prenom) }}
+        {{ form_widget(inscription_form.prenom) }}
+        <br>
+        {{ form_label(inscription_form.email) }}
+        {{ form_widget(inscription_form.email) }}
+        <br>
+        {{ form_label(inscription_form.pseudo) }}
+        {{ form_widget(inscription_form.pseudo) }}
+        <br>
+        {{ form_label(inscription_form.password) }}
+        {{ form_widget(inscription_form.password) }}
+        <br>
+        {{ form_label(inscription_form.codepostal) }}
+        {{ form_widget(inscription_form.codepostal) }}
+        <br>
+        {{ form_label(inscription_form.pays) }}
+        {{ form_widget(inscription_form.pays) }}
+        <br>
+        {{ form_rest(inscription_form) }}
+        <br>
+        <button type="submit">Enregistrer</button>
+    
+    </div>
+ {{ form_end(inscription_form)}}
+</div>
