@@ -1,0 +1,68 @@
+<style>
+    .container {
+        background-image : url(https://images.pexels.com/photos/7736104/pexels-photo-7736104.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+        background-size : 100% 100%;
+        width: 100%;
+        min-height: 100%;
+    }
+    .formp  {
+        display: grid;
+        min-width: 250px;
+        max-width: 250px;
+        margin: auto;
+        border: 2.5px solid red;
+        background-color: rgb(211, 94, 235);
+        text-align: center;
+        
+        padding: 10px 20px 10px 20px;
+    }
+    .titre  {
+            display: grid;
+            margin: auto;
+            text-align: center;
+            color: red; 
+            font-size: 30px; 
+             
+        }
+    label  {
+       color: red;
+    }
+    button  {
+        background: bisque;
+    }
+</style>   
+<div class="container">
+ {{ form_start(pub_form) }}
+    <br>
+    <div class="titre">
+    Proposer votre publicité
+    </div>
+    <br>
+    <br>
+    <div class="formp">
+   
+        {{ form_label(pub_form.name) }}
+        {{ form_widget(pub_form.name) }}
+        <br>
+        {{ form_label(pub_form.email) }}
+        {{ form_widget(pub_form.email) }}
+        <br>
+        {{ form_label(pub_form.postalcode) }}
+        {{ form_widget(pub_form.postalcode) }}
+        <br>
+        {{ form_label(pub_form.Country) }}
+        {{ form_widget(pub_form.Country) }}
+        <br>   
+        <div>
+        {{ form_label(pub_form.file) }}
+        <input type="file">
+        </div>
+       
+        {{ form_label(pub_form.description) }}
+        {{ form_widget(pub_form.description) }}
+        <br>
+        <button type="submit">Enregistrer</button>
+    {{ form_end(pub_form, {'render_rest': false}) }}
+    </div>
+ 
+</div>

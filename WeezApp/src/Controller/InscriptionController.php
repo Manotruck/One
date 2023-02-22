@@ -17,15 +17,15 @@ class InscriptionController extends AbstractController
     public function index(Request $request, EntityManagerInterface $entityManager): Response
     {    
         $User = new User();
-        $InscriptionForm = $this->createForm(InscriptionType::class, $User);
-        $InscriptionForm->handleRequest($request);
-            if ($InscriptionForm->isSubmitted() && $InscriptionForm->isValid()){
+        $Inscription = $this->createForm(InscriptionType::class, $User);
+        $Inscription->handleRequest($request);
+            if ($Inscription->isSubmitted() && $Inscription->isValid()){
         $entityManager->persist($User);
         $entityManager->flush();
             }  
         
         return $this->render('inscription/index.html.twig', [
-            'inscription_form' => $InscriptionForm->createView(),
+            'inscription_form' => $Inscription->createView(),
         ]);
     }
 }
