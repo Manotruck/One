@@ -19,6 +19,10 @@ class UserPubController extends AbstractController
         $UserPubForm = $this->createForm(UserPubType::class, $UserPub);
         $UserPubForm->handleRequest($request);
             if ($UserPubForm->isSubmitted() && $UserPubForm->isValid()){
+        $someNewFilename = 'name';
+        $file = $UserPubForm['file']->getData();
+        $file->move($UserPub->getFile(), $someNewFilename);
+
         $entityManager->persist($UserPub);
         $entityManager->flush();
             }  

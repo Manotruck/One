@@ -27,11 +27,9 @@ class UserPub
     private ?string $Country = null;
 
     #[ORM\Column]
-    private $file = null;
+    private ?string $file = null;
     
-    #[ORM\Column]
-    private $description;
-
+  
 
     public function getId(): ?int
     {
@@ -85,28 +83,15 @@ class UserPub
 
         return $this;
     }
-
-    public function getFile()
+    public function getFile(): ?string
     {
         return $this->file;
     }
 
-    public function setFile($file): self
+    public function setFile(string $file): self
     {
         $this->file = $file;
 
         return $this;
-    }
-    
-    public function getDescription()
-    {
-        return $this->description;
-    }
-
-    public function setDescription($description): self
-    {
-        $this->description = $description;
-
-        return $this;
-    }
+    }   
 }

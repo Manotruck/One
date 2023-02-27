@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\UserPub;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\UrlType;
@@ -17,8 +18,11 @@ class UserPubType extends AbstractType
             ->add('email')
             ->add('postalcode')
             ->add('Country')
-            ->add('file', UrlType::class)
-            ->add('description', TextareaType::class)
+            ->add('file', UrlType::class, [
+                'default_protocol' => '',
+            ])
+
+            ->add('submit', SubmitType::class)
         ;
     }
 

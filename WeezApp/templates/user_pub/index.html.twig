@@ -53,16 +53,10 @@
         {{ form_label(pub_form.Country) }}
         {{ form_widget(pub_form.Country) }}
         <br>   
-        <div>
         {{ form_label(pub_form.file) }}
-        <input type="file">
-        </div>
-       
-        {{ form_label(pub_form.description) }}
-        {{ form_widget(pub_form.description) }}
-        <br>
-        <button type="submit">Enregistrer</button>
-    {{ form_end(pub_form, {'render_rest': false}) }}
+        {{ form_widget(pub_form.file) }}
+        {#<button type="submit">Enregistrer</button>#}
+    {{ form_end(pub_form) }}
     </div>
  
 </div>
